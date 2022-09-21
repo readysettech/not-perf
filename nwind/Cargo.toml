@@ -3,19 +3,20 @@ name = "nwind"
 version = "0.1.0"
 authors = ["Jan Bujak <j@exia.io>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
 byteorder = "1"
-gimli = { version = "0.25", default-features = false, features = ["std", "read", "endian-reader"] }
-goblin = "0.0.24"
-scroll = "0.9"
+gimli = { version = "0.26", default-features = false, features = ["std", "read", "endian-reader"] }
+goblin = "0.5"
+scroll = "0.11"
 memmap = "0.7"
 log = { version = "0.4", optional = true }
 speedy = "0.8"
-lru = "0.6"
+lru = "0.7"
 cpp_demangle = "0.3"
 rustc-demangle = { version = "0.1", optional = true }
-addr2line = { version = "0.16", optional = true, default-features = false, features = ["std"] }
+addr2line = { version = "0.17", optional = true, default-features = false, features = ["std"] }
 proc-maps = { version = "0.1", path = "../proc-maps" }
 libc = "0.2"
 thread-local-reentrant = { version = "0.1", path = "../thread-local-reentrant", optional = true }

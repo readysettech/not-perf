@@ -12,8 +12,8 @@ use gimli::{
     EhFrame,
     EhFrameHdr,
     DebugFrame,
-    UninitializedUnwindContext,
     UnwindSection,
+    UnwindContext,
     UnwindOffset,
     CfaRule,
     CieOrFde,
@@ -34,7 +34,7 @@ use crate::range_map::RangeMap;
 type DataReader< E > = EndianSlice< 'static, E >;
 
 pub struct ContextCache< E: Endianity > {
-    cached_context: UninitializedUnwindContext< DataReader< E > >
+    cached_context: Box<UnwindContext< DataReader< E > > >
 }
 
 impl< E: Endianity > ContextCache< E > {

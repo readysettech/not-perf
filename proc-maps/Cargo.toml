@@ -3,5 +3,6 @@ name = "proc-maps"
 version = "0.1.0"
 authors = ["Jan Bujak <j@exia.io>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
